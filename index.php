@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once('db/connect.php');
+require_once("./about.html")
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -49,36 +50,36 @@ include_once('db/connect.php');
 
 <body>
     <?php
-	include('include/topbar.php');
-	include('include/menu.php');
-	include('include/slider.php');
+    include('include/topbar.php');
+    include('include/menu.php');
+    include('include/slider.php');
 
-	if (isset($_GET['quanly'])) {
-		$tam = $_GET['quanly'];
-	} else {
-		$tam = '';
-	}
+    if (isset($_GET['quanly'])) {
+        $tam = $_GET['quanly'];
+    } else {
+        $tam = '';
+    }
 
-	if ($tam == 'danhmuc') {
-		include('include/danhmuc.php');
-	} elseif ($tam == 'chitietsp') {
-		include('include/chitietsp.php');
-	} elseif ($tam == 'giohang') {
-		include('include/giohang.php');
-	} elseif ($tam == 'timkiem') {
-		include('include/timkiem.php');
-	} elseif ($tam == 'tintuc') {
-		include('include/tintuc.php');
-	} elseif ($tam == 'chitiettin') {
-		include('include/chitiettin.php');
-	} elseif ($tam == 'xemdonhang') {
-		include('include/xemdonhang.php');
-	} else {
-		include('include/home.php');
-	}
+    if ($tam == 'danhmuc') {
+        include('include/danhmuc.php');
+    } elseif ($tam == 'chitietsp') {
+        include('include/chitietsp.php');
+    } elseif ($tam == 'giohang') {
+        include('include/giohang.php');
+    } elseif ($tam == 'timkiem') {
+        include('include/timkiem.php');
+    } elseif ($tam == 'tintuc') {
+        include('include/tintuc.php');
+    } elseif ($tam == 'chitiettin') {
+        include('include/chitiettin.php');
+    } elseif ($tam == 'xemdonhang') {
+        include('include/xemdonhang.php');
+    } else {
+        include('include/home.php');
+    }
 
-	include('include/footer.php');
-	?>
+    include('include/footer.php');
+    ?>
     <!-- js-files -->
     <!-- jquery -->
     <script src="js/jquery-2.2.3.min.js"></script>
@@ -125,7 +126,7 @@ include_once('db/connect.php');
     <!--  <script src="js/minicart.js"></script> -->
     <script>
     paypals.minicarts
-    .render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
+        .render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
 
     paypals.minicarts.cart.on('checkout', function(evt) {
         var items = this.items(),
